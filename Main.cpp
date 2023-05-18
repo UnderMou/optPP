@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Problem.cpp"
+#include "Solver.cpp"
 
 int main(){
     Result r;
@@ -7,7 +7,10 @@ int main(){
     r.write_results();
 
     Problem p;
-    p.f_obj(&r);
+    
+    Solver s;
+    s.init(p,&r,7);
+    s.run();
 
     r.write_results();
 }

@@ -22,6 +22,22 @@ void Result::set_Fobj(int idx, float value){
     pop_Fobj[idx] = value;
 }
 
+void Result::set_pop(int idx, vector<float> new_ind){
+    pop[idx] = new_ind;
+}
+
+vector<float> Result::get_pop(int idx){
+    return pop[idx];
+}
+
+int Result::get_N(){
+    return N;
+}
+
+int Result::get_indSize(){
+    return ind_size;
+}
+
 void Result::write_results(){
     cout << "pop:" << endl;
     for(int i=0;i<N;i++){

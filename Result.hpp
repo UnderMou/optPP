@@ -13,5 +13,13 @@ class Result{
 
         void set_Fobj(int idx, float value);
 
+        void set_pop(int idx, vector<float> new_ind);
+
+        vector<float> get_pop(int idx);
+
+        int get_N();
+
+        int get_indSize();
+
         void write_results();
 };

@@ -4,5 +4,5 @@ class Problem{
     protected:
 
     public:
-        void f_obj(Result* res);
+        float f_obj(vector<float> ind);
 };
