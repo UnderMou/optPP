@@ -23,6 +23,7 @@ void Solver::run(){
 }
 
 void Solver::evaluate(){
+    /*
     for(int i = 0;i<res->get_N();i++){
         // evaluate objective funtion of each individual and set its value
         // on Result.Fobj attribute of the Result class
@@ -31,8 +32,11 @@ void Solver::evaluate(){
                     prob.f_obj(res->get_pop(i))  // individual objective function value
                 );
     }
+    */
+
+    
 }
 
 void Solver::update_pop(){
-    alg.advance_gen(res);    
+    alg.advance_gen(res, prob);    
 }

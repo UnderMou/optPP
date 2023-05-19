@@ -11,4 +11,6 @@ class Mating{
         void matingPool_do(Result *res);
 
         void print_matingPool();
+
+        int get_toChoose(int idx);
 };

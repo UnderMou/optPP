@@ -1,4 +1,5 @@
 #include "Result.hpp"
+#include <bits/stdc++.h>
 
 void Result::init(int value1, int value2){
     // Define population sizes
@@ -10,7 +11,10 @@ void Result::init(int value1, int value2){
 
         vector<float> temp;
         for(int j=0;j<ind_size;j++){
-            temp.push_back(j);   // TODO: Gerar os elementos aleatóriamente         
+            temp.push_back(
+                static_cast <float> (rand()) / static_cast <float> (RAND_MAX) // Generate each decision variable randomgly
+                                                                              // TODO: set upper/lower bounds
+            );         
         }
 
         pop.push_back(temp);
