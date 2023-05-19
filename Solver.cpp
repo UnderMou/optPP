@@ -1,10 +1,11 @@
 #include "Solver.hpp"
 
-void Solver::init(Problem value1, Result* value2, int value3){
+void Solver::init(Problem value1, Result* value2, int value3, Algorithm value4){
     max_gen = value3;
     prob = value1;
     res = value2;
     t = 0;
+    alg = value4;
 }
 
 bool Solver::stop_criteria(){
@@ -16,7 +17,7 @@ void Solver::run(){
     while(stop_criteria()){
         cout << "iteração: " << t << endl;
         evaluate();
-        uptade_pop();
+        update_pop();
         t++;
     }
 }
@@ -32,10 +33,6 @@ void Solver::evaluate(){
     }
 }
 
-void Solver::uptade_pop(){
-    // TODO: Implement a real update_pop functionality using the Algorithm Class
-    vector<float> vec = {5,5,5,5,5};
-    for(int i = 0;i<res->get_indSize();i++){
-        res->set_pop(1,vec);
-    }
+void Solver::update_pop(){
+    alg.advance_gen(res);    
 }

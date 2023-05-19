@@ -1,4 +1,5 @@
 #include "Problem.cpp"
+#include "Algorithm.cpp"
 
 class Solver{
     protected:
@@ -6,8 +7,9 @@ class Solver{
         int t;
         Problem prob;
         Result* res;
+        Algorithm alg;
     public:
-        void init(Problem prob, Result* res, int max_gen);
+        void init(Problem prob, Result* res, int max_gen, Algorithm alg);
 
         void run();
 
@@ -15,6 +17,6 @@ class Solver{
 
         void evaluate();
 
-        void uptade_pop();
+        void update_pop();
 
 };

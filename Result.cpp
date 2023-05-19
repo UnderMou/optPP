@@ -14,7 +14,7 @@ void Result::init(int value1, int value2){
         }
 
         pop.push_back(temp);
-        pop_Fobj.push_back(0);
+        pop_Fobj.push_back(i);
     }
 }
 
@@ -36,6 +36,10 @@ int Result::get_N(){
 
 int Result::get_indSize(){
     return ind_size;
+}
+
+float Result::get_Fobj(int idx){
+    return pop_Fobj[idx];
 }
 
 void Result::write_results(){

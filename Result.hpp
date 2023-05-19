@@ -21,5 +21,7 @@ class Result{
 
         int get_indSize();
 
+        float get_Fobj(int idx);
+
         void write_results();
 };
