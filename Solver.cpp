@@ -16,7 +16,7 @@ bool Solver::stop_criteria(){
 void Solver::run(){
     while(stop_criteria()){
         cout << "iteração: " << t << endl;
-        evaluate();
+        //evaluate();
         update_pop();
         t++;
     }

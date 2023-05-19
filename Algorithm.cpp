@@ -13,5 +13,6 @@ void Algorithm::advance_gen(Result *res){
 
     // Generate individuals "to_choose" on mating_pool.to_choose attribute
     mating_pool.matingPool_do(res);
-    //mating_pool.print_matingPool();
+    mating_pool.print_matingPool();
+    
 }

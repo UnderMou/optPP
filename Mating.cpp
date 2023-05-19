@@ -4,7 +4,8 @@
 void Mating::init(int seed, Result *res){
     srand(seed);
 
-    for(int i=0;i<res->get_N();i++){
+    // Initiate the mating pool
+    for(int i=0;i<(2*res->get_N());i++){
         vector<int> temp;
         for(int j=0;j<tourn_size;j++){
             temp.push_back(rand()%res->get_indSize());
