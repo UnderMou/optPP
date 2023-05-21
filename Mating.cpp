@@ -8,7 +8,7 @@ void Mating::init(int seed, Result *res){
     for(int i=0;i<(int)(2*res->get_N());i++){
         vector<int> temp;
         for(int j=0;j<tourn_size;j++){
-            temp.push_back(rand()%res->get_indSize());
+            temp.push_back(rand()%res->get_N());
         }
         mat_pool_idx.push_back(temp);
 
@@ -20,7 +20,7 @@ void Mating::matingPool_do(Result *res){
     // Generate the random index for tournament selection
     for(int i=0;i<mat_pool_idx.size();i++){
         for(int j=0;j<mat_pool_idx[i].size();j++){
-            mat_pool_idx[i][j] = rand()%res->get_indSize();
+            mat_pool_idx[i][j] = rand()%res->get_N();
         }
     }
 
