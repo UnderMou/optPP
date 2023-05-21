@@ -26,7 +26,7 @@ void Algorithm::advance_gen(Result *res, Problem prob){
     cross.print_offspring();
 
     // Mutation
-    
+    // TODO: develop mutation functionality
 
     // Selection
     selec.update_pop_selection(res, &cross);
