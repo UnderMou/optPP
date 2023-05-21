@@ -28,4 +28,5 @@ void Algorithm::advance_gen(Result *res, Problem prob){
     // Selection
     selec.update_pop_selection(res, &cross);
     selec.print_selec_mat();
+    selec.print_sorted();
 }

@@ -1,4 +1,7 @@
-#include "Result.cpp"
+//#include "Result.cpp"
+#include <vector>
+
+using namespace std;
 
 class Problem{
     protected:

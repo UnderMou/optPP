@@ -1,4 +1,4 @@
-#include "Problem.cpp"
+#include "Result.cpp"
 #include "Algorithm.cpp"
 
 class Solver{

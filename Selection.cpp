@@ -30,7 +30,11 @@ void Selection::update_pop_selection(Result *res, Crossover *cross){
     }
 
     // update Result.pop and Result.Fobj
-    // TODO: sort sel_fobjs storaging the indexes ...
+    fobj_sort = sort_indexes(sel_fobjs);
+    for(int i=0;i<res->get_N();i++){
+        res->set_pop(i, sel_inds[fobj_sort[i]]);
+        res->set_Fobj(i, sel_fobjs[fobj_sort[i]]);
+    }
     
 }
 
@@ -48,5 +52,31 @@ void Selection::print_selec_mat(){
     for(int i=0;i<sel_fobjs.size();i++){
         cout << sel_fobjs[i] << " ";
     }
+    cout << endl;
+}
+
+template <typename T>
+vector<size_t> Selection::sort_indexes(const vector<T> &v){
+
+    // initialize original index locations
+    vector<size_t> idx(v.size());
+    iota(idx.begin(), idx.end(), 0);
+
+    // sort indexes based on comparing values in v
+    // using std::stable_sort instead of std::sort
+    // to avoid unnecessary index re-orderings
+    // when v contains elements of equal values 
+    stable_sort(idx.begin(), idx.end(),[&v](size_t i1, size_t i2) {return v[i1] < v[i2];});
+
+    return idx;
+}
+
+void Selection::print_sorted(){
+    cout << endl;
+    cout << "fobj_sort:" << endl;
+        for(int i=0;i<fobj_sort.size();i++){
+            cout << fobj_sort[i] << " ";
+        }
+        cout << endl;
     cout << endl;
 }

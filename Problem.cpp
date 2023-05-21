@@ -1,7 +1,5 @@
 #include "Problem.hpp"
 
-using namespace std;
-
 float Problem::f_obj(vector<float> ind){
     // Objective function example: sum all 'ind' elements.
     float ret = 0;
@@ -9,5 +7,5 @@ float Problem::f_obj(vector<float> ind){
         ret += ind[i];
     }
     
-    return ret; 
+    return (-1)*ret; 
 }

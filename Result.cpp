@@ -1,7 +1,7 @@
 #include "Result.hpp"
 #include <bits/stdc++.h>
 
-void Result::init(int value1, int value2){
+void Result::init(int value1, int value2, Problem *prob){
     // Define population sizes
     N = value1;
     ind_size = value2;
@@ -16,9 +16,10 @@ void Result::init(int value1, int value2){
                                                                               // TODO: set upper/lower bounds
             );         
         }
-
+        // Initialize pop vec
         pop.push_back(temp);
-        pop_Fobj.push_back(i);
+        // Initialize Fobj
+        pop_Fobj.push_back(prob->f_obj(temp));
     }
 }
 
