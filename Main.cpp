@@ -5,7 +5,7 @@ int main(){
     Problem p;
 
     Result r;
-    r.init(50,5,&p);
+    r.init(100,5,&p);
     r.write_results();
 
     Algorithm a;
