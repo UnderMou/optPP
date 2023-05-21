@@ -5,14 +5,14 @@ int main(){
     Problem p;
 
     Result r;
-    r.init(100,10,&p);
+    r.init(50,5,&p);
     r.write_results();
 
     Algorithm a;
-    a.init(15, &r); // seed = 13, Result object, 
+    a.init(25, &r); // seed = 13, Result object, 
     
     Solver s;
-    s.init(p,&r,100,a);
+    s.init(p,&r,500,a);
     s.run();
 
     r.write_results();

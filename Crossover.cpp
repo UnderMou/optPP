@@ -121,3 +121,7 @@ void Crossover::evaluate_offs(Problem prob){
                    );
     }
 }
+
+vector<vector<float>> Crossover::get_offspring(){
+    return offspring;
+}

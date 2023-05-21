@@ -27,4 +27,6 @@ class Crossover{
         vector<float> get_off(int idx);
 
         void evaluate_offs(Problem prob);
+
+        vector<vector<float>> get_offspring();
 };
