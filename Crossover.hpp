@@ -1,7 +1,7 @@
 class Crossover{
     protected:
         float prob_cross = 0.6;
-        float alpha = 0.3;
+        float alpha = 0.5;
         vector<vector<float>> p_cross;
         vector<vector<float>> offspring;
         vector<float> off_Fobj;
