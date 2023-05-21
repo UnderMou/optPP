@@ -22,6 +22,8 @@ class Crossover{
 
         int get_offSize();
 
+        float get_offFobj(int idx);
+
         vector<float> get_off(int idx);
 
         void evaluate_offs(Problem prob);

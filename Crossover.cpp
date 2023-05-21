@@ -103,6 +103,10 @@ int Crossover::get_offSize(){
     return off_Fobj.size();
 }
 
+float Crossover::get_offFobj(int idx){
+    return off_Fobj[idx];
+}
+
 vector<float> Crossover::get_off(int idx){
     return offspring[idx];
 }

@@ -1,10 +1,12 @@
 #include "Mating.cpp"
 #include "Crossover.cpp"
+#include "Selection.cpp"
 #include "Algorithm.hpp"
 
 void Algorithm::init(int seed, Result *res){
     mating_pool.init(seed, res);
     cross.init(res);
+    selec.init(res,&cross);
 }
 
 void Algorithm::advance_gen(Result *res, Problem prob){
@@ -22,5 +24,8 @@ void Algorithm::advance_gen(Result *res, Problem prob){
     cross.print_p_cross();
     cross.evaluate_offs(prob);
     cross.print_offspring();
-    
+
+    // Selection
+    selec.update_pop_selection(res, &cross);
+    selec.print_selec_mat();
 }
