@@ -2,7 +2,7 @@ class Algorithm{
     protected:
         Tournament mating_pool;
         WAR cross;
-        Selection selec;
+        FobjSelec selec;
         UniMut mut;
     public:
         void init(int seed, Result *res);

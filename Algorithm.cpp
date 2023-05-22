@@ -1,7 +1,7 @@
 #include "./Mating/Tournament/Tournament.cpp"
 #include "./Crossover/WAR/WAR.cpp"
 #include "./Mutation/UniMut/UniMut.cpp"
-#include "./Selection/Selection.cpp"
+#include "./Selection/FobjSelec/FobjSelec.cpp"
 #include "Algorithm.hpp"
 
 void Algorithm::init(int seed, Result *res){

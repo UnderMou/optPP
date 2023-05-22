@@ -7,14 +7,13 @@ class Selection{
         vector<vector<float>> sel_inds;
         vector<size_t> fobj_sort;
     public:
-        void init(Result *res, Crossover *cross);
+        virtual void init(Result *res, Crossover *cross) = 0;
 
-        void update_pop_selection(Result *res, Crossover *cross);
+        virtual void update_pop_selection(Result *res, Crossover *cross) = 0;
 
         void print_selec_mat();
 
-        template <typename T>
-        vector<size_t> sort_indexes(const vector<T> &v);
+        virtual vector<size_t> sort_indexes(const vector<float> &v) = 0;
 
         void print_sorted();
 };
