@@ -1,10 +1,9 @@
-#include "Mating.hpp"
-#include <limits>
+#include "Tournament.hpp"
 
-void Mating::init(int seed, Result *res){
-    srand(seed);
+void Tournament::init(int seed, Result *res){
+srand(seed);
 
-    // Initiate the mating pool
+    // Initiate the mating pool tournament selection
     for(int i=0;i<(int)(2*res->get_N());i++){
         vector<int> temp;
         for(int j=0;j<tourn_size;j++){
@@ -16,7 +15,7 @@ void Mating::init(int seed, Result *res){
     }
 }
 
-void Mating::matingPool_do(Result *res){
+void Tournament::matingPool_do(Result *res){
     // Generate the random index for tournament selection
     for(int i=0;i<mat_pool_idx.size();i++){
         for(int j=0;j<mat_pool_idx[i].size();j++){
@@ -37,25 +36,4 @@ void Mating::matingPool_do(Result *res){
         }
         to_choose[i] = aux;
     }
-}
-
-void Mating::print_matingPool(){
-    cout << "Mating pool:" <<endl;
-    for(int i=0;i<mat_pool_idx.size();i++){
-        for(int j=0;j<mat_pool_idx[i].size();j++){
-            cout << mat_pool_idx[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-
-    cout << "'to_choose' parents:" <<endl;
-    for(int i=0;i<to_choose.size();i++){
-        cout << to_choose[i] << " ";
-    }
-    cout << endl;
-}
-
-int Mating::get_toChoose(int idx){
-    return to_choose[idx];
 }

@@ -1,20 +1,19 @@
 class Crossover{
     protected:
         float prob_cross = 0.6;
-        float alpha = 0.5;
         vector<vector<float>> p_cross;
         vector<vector<float>> offspring;
         vector<float> off_Fobj;
     public:
-        void init(Result *res);
+        virtual void init(Result *res) = 0;
 
-        void generate_ProbMat();
+        virtual void generate_ProbMat() = 0;
 
         void print_p_cross();
 
         void print_offspring();
 
-        void crossover_do(Result *res, Mating *mat);
+        virtual void crossover_do(Result *res, Mating *mat) = 0;
 
         void set_offspring(int idx, vector<float> new_ind);
 

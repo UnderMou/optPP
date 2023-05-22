@@ -1,7 +1,7 @@
-#include "Mating.cpp"
-#include "Crossover.cpp"
-#include "Mutation.cpp"
-#include "Selection.cpp"
+#include "./Mating/Tournament/Tournament.cpp"
+#include "./Crossover/WAR/WAR.cpp"
+#include "./Mutation/Mutation.cpp"
+#include "./Selection/Selection.cpp"
 #include "Algorithm.hpp"
 
 void Algorithm::init(int seed, Result *res){

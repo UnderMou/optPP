@@ -1,7 +1,7 @@
 class Algorithm{
     protected:
-        Mating mating_pool;
-        Crossover cross;
+        Tournament mating_pool;
+        WAR cross;
         Selection selec;
         Mutation mut;
     public:

@@ -6,7 +6,7 @@ int main(){
     p.init();
 
     Result r;
-    r.init(100,5,&p);
+    r.init(50,5,&p);
     r.write_results();
 
     Algorithm a;
