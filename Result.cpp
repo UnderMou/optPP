@@ -1,4 +1,5 @@
 #include "Result.hpp"
+#include <cmath>
 #include <bits/stdc++.h>
 
 void Result::init(int value1, int value2, Problem *prob){
@@ -7,13 +8,14 @@ void Result::init(int value1, int value2, Problem *prob){
     ind_size = value2;
 
     // Initialize population matrix randomngly and objective function values with zeros
+    float r;
     for(int i=0;i<N;i++){
 
         vector<float> temp;
         for(int j=0;j<ind_size;j++){
+            r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX); // a random float [0,1]
             temp.push_back(
-                static_cast <float> (rand()) / static_cast <float> (RAND_MAX) // Generate each decision variable randomgly
-                                                                              // TODO: set upper/lower bounds
+                prob->get_Lbound()[j] + r*abs(prob->get_Ubound()[j] - prob->get_Lbound()[j])               
             );         
         }
         // Initialize pop vec

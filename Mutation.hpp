@@ -9,5 +9,5 @@ class Mutation{
 
         void print_p_mut();
 
-        void mutation_do(Crossover *cross);
+        void mutation_do(Crossover *cross, Problem *prob);
 };

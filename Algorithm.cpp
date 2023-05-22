@@ -22,7 +22,7 @@ void Algorithm::advance_gen(Result *res, Problem prob){
     cross.print_p_cross();
 
     // Mutation
-    mut.mutation_do(&cross);
+    mut.mutation_do(&cross, &prob);
     mut.print_p_mut();
 
     // Re-evaluation

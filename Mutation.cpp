@@ -33,10 +33,12 @@ void Mutation::print_p_mut(){
     cout << endl;
 }
 
-void Mutation::mutation_do(Crossover *cross){
+void Mutation::mutation_do(Crossover *cross, Problem *prob){
     generate_Prob_mutMat();
     cout << endl;
     cout << "Mutation:" << endl;
+
+    float r;
     for(int i=0;i<p_mut.size();i++){
         vector<float> mut_vec = cross->get_off(i);
 
@@ -44,7 +46,8 @@ void Mutation::mutation_do(Crossover *cross){
             // Check if mutation will occur for each variable
             if(p_mut[i][j]<=prob_mut){
                 cout << "OK\t";
-                mut_vec[j] = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+                r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+                mut_vec[j] = prob->get_Lbound()[j] + r*abs(prob->get_Ubound()[j] - prob->get_Lbound()[j]) ;
             }else{
                 cout << "NOT\t";
             }

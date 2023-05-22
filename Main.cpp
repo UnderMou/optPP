@@ -3,6 +3,7 @@
 
 int main(){
     Problem p;
+    p.init();
 
     Result r;
     r.init(100,5,&p);
@@ -12,7 +13,7 @@ int main(){
     a.init(25, &r); // seed = 13, Result object, 
     
     Solver s;
-    s.init(p,&r,500,a);
+    s.init(p,&r,1000,a);
     s.run();
 
     r.write_results();
