@@ -12,7 +12,7 @@ float Problem::f_obj(vector<float> ind){
         ret += ind[i];
     }
     
-    return (1)*ret; 
+    return (-1)*ret; 
 }
 
 vector<float> Problem::get_Ubound(){

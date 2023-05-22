@@ -1,6 +1,6 @@
 #include "./Mating/Tournament/Tournament.cpp"
 #include "./Crossover/WAR/WAR.cpp"
-#include "./Mutation/Mutation.cpp"
+#include "./Mutation/UniMut/UniMut.cpp"
 #include "./Selection/Selection.cpp"
 #include "Algorithm.hpp"
 

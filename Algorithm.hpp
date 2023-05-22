@@ -3,7 +3,7 @@ class Algorithm{
         Tournament mating_pool;
         WAR cross;
         Selection selec;
-        Mutation mut;
+        UniMut mut;
     public:
         void init(int seed, Result *res);
 

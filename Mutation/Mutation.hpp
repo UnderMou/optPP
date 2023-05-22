@@ -3,11 +3,11 @@ class Mutation{
         float prob_mut = 0.03;
         vector<vector<float>> p_mut;
     public:
-        void init(Crossover *cross);
+        virtual void init(Crossover *cross) = 0;
 
-        void generate_Prob_mutMat();
+        virtual void generate_Prob_mutMat() = 0;
 
         void print_p_mut();
 
-        void mutation_do(Crossover *cross, Problem *prob);
+        virtual void mutation_do(Crossover *cross, Problem *prob) = 0;
 };
