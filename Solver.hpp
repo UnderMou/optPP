@@ -1,3 +1,6 @@
+#ifndef _Solver_hpp_
+#define _Solver_hpp_
+
 #include "Result.cpp"
 #include "./Algorithm/Algorithm.hpp"
 
@@ -19,3 +22,4 @@ class Solver{
         void update_pop(Algorithm *alg);
 
 };
+#endif

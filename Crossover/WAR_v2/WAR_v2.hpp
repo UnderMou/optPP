@@ -1,6 +1,8 @@
 // Whole Arithmetic Recombination - WAR
 // Reference: Introduction to Evolutionary Computing Second Edition. 
 //            By: A.E. Eiben & J.E. Smith
+#ifndef _WAR_v2_hpp
+#define _WAR_v2_hpp
 
 #include "../Crossover.cpp"
 
@@ -14,4 +16,4 @@ class WAR_v2 : public Crossover{
 
         void crossover_do(Result *res, Mating *mat);
 };
-
+#endif

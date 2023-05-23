@@ -1,3 +1,6 @@
+#ifndef _Solver_cpp_
+#define _Solver_cpp_
+
 #include "Solver.hpp"
 
 void Solver::init(Problem value1, Result* value2, int value3){
@@ -39,3 +42,5 @@ void Solver::evaluate(){
 void Solver::update_pop(Algorithm *alg){
     alg->advance_gen(res, prob);    
 }
+
+#endif

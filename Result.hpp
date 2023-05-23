@@ -1,3 +1,6 @@
+#ifndef _Result_hpp_
+#define _Result_hpp_
+
 #include "Problem.cpp"
 
 using namespace std;
@@ -25,3 +28,4 @@ class Result{
 
         void write_results();
 };
+#endif

@@ -1,3 +1,6 @@
+#ifndef _Result_cpp_
+#define _Result_cpp_
+
 #include "Result.hpp"
 #include <cmath>
 #include <bits/stdc++.h>
@@ -64,3 +67,4 @@ void Result::write_results(){
         cout << endl;
     }
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef _Problem_cpp_
+#define _Problem_cpp_
+
 #include "Problem.hpp"
 
 void Problem::init(){
@@ -22,3 +25,4 @@ vector<float> Problem::get_Ubound(){
 vector<float> Problem::get_Lbound(){
     return lower_bound;
 }
+#endif

@@ -1,3 +1,6 @@
+#ifndef _GA_simplest_cpp_
+#define _GA_simplest_cpp_
+
 #include "GA_simplest.hpp"
 
 void GA_simplest::init(int seed, Result *res){
@@ -30,3 +33,4 @@ void GA_simplest::advance_gen(Result *res, Problem prob){
     selec.print_selec_mat();
     selec.print_sorted();
 }
+#endif

@@ -1,3 +1,5 @@
+#ifndef _Mutation_hpp_
+#define _Mutation_hpp_
 class Mutation{
     protected:
         float prob_mut = 0.03;
@@ -11,3 +13,4 @@ class Mutation{
 
         virtual void mutation_do(Crossover *cross, Problem *prob) = 0;
 };
+#endif

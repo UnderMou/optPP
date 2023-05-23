@@ -1,4 +1,6 @@
-//#include "Result.cpp"
+#ifndef _Problem_hpp_
+#define _Problem_hpp_
+
 #include <vector>
 
 using namespace std;
@@ -16,3 +18,4 @@ class Problem{
 
         vector<float> get_Lbound();
 };
+#endif

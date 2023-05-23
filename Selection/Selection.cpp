@@ -1,3 +1,6 @@
+#ifndef _Selection_cpp_
+#define _Selection_cpp_
+
 #include "Selection.hpp"
 
 void Selection::print_selec_mat(){
@@ -26,3 +29,4 @@ void Selection::print_sorted(){
         cout << endl;
     cout << endl;
 }
+#endif

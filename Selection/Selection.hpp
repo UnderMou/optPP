@@ -1,3 +1,6 @@
+#ifndef _Selection_hpp_
+#define _Selection_hpp_
+
 #include <numeric>      // std::iota
 #include <algorithm>    // std::sort, std::stable_sort
 
@@ -17,3 +20,4 @@ class Selection{
 
         void print_sorted();
 };
+#endif

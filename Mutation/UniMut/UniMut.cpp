@@ -1,3 +1,6 @@
+#ifndef _UniMut_cpp_
+#define _UniMut_cpp_
+
 #include "UniMut.hpp"
 
 void UniMut::init(Crossover *cross){
@@ -46,3 +49,4 @@ void UniMut::mutation_do(Crossover *cross, Problem *prob){
         cout << endl;
     }
 }
+#endif

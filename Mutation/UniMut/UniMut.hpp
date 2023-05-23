@@ -1,6 +1,8 @@
 // Uniform Mutation - UniMut
 // Reference: Introduction to Evolutionary Computing Second Edition. 
 //            By: A.E. Eiben & J.E. Smith
+#ifndef _UniMut_hpp_
+#define _UniMut_hpp_
 
 #include "../Mutation.cpp"
 
@@ -14,3 +16,4 @@ class UniMut : public Mutation{
 
         void mutation_do(Crossover *cross, Problem *prob);
 };
+#endif

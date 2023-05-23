@@ -1,3 +1,5 @@
+#ifndef _Mating_hpp_
+#define _Mating_hpp_
 class Mating{
     // This Mating pool class is a base class for specific mating mechanisms
     protected:
@@ -12,3 +14,4 @@ class Mating{
 
         int get_toChoose(int idx);
 };
+#endif

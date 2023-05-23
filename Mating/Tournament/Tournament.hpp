@@ -1,6 +1,8 @@
 // Tournament Selection
-// Obs.: This tournament selection downs't account for constraint
+// Obs.: This tournament selection doesn't account for constraint
 //       violation.
+#ifndef _Tournament_hpp_
+#define _Tournament_hpp_
 
 #include "../Mating.cpp"
 
@@ -13,3 +15,4 @@ class Tournament : public Mating{
 
         void matingPool_do(Result *res);
 };
+#endif

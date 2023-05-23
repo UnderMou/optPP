@@ -1,3 +1,6 @@
+#ifndef _Crossover_cpp_
+#define _Crossover_cpp_
+
 #include "Crossover.hpp"
 
 void Crossover::print_p_cross(){
@@ -62,3 +65,4 @@ void Crossover::evaluate_offs(Problem prob){
 vector<vector<float>> Crossover::get_offspring(){
     return offspring;
 }
+#endif

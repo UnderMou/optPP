@@ -1,3 +1,5 @@
+#ifndef _Crossover_hpp_
+#define _Crossover_hpp_
 class Crossover{
     protected:
         float prob_cross = 0.6;
@@ -29,3 +31,4 @@ class Crossover{
 
         vector<vector<float>> get_offspring();
 };
+#endif

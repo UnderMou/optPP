@@ -1,3 +1,6 @@
+#ifndef _WAR_v2_cpp
+#define _WAR_v2_cpp
+
 #include "WAR_v2.hpp"
 
 void WAR_v2::init(Result *res){
@@ -62,3 +65,4 @@ void WAR_v2::crossover_do(Result *res, Mating *mat){
         cout << endl;
     }
 }
+#endif

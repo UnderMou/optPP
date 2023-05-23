@@ -1,7 +1,10 @@
+#ifndef _Tournament_cpp_
+#define _Tournament_cpp_
+
 #include "Tournament.hpp"
 
 void Tournament::init(int seed, Result *res){
-srand(seed);
+    srand(seed);
 
     // Initiate the mating pool tournament selection
     for(int i=0;i<(int)(2*res->get_N());i++){
@@ -37,3 +40,4 @@ void Tournament::matingPool_do(Result *res){
         to_choose[i] = aux;
     }
 }
+#endif

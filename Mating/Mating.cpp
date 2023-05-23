@@ -1,3 +1,6 @@
+#ifndef _Mating_cpp_
+#define _Mating_cpp_
+
 #include "Mating.hpp"
 #include <limits>
 
@@ -21,3 +24,5 @@ void Mating::print_matingPool(){
 int Mating::get_toChoose(int idx){
     return to_choose[idx];
 }
+
+#endif

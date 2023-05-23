@@ -1,3 +1,6 @@
+#ifndef _FobjSelec_cpp_
+#define _FobjSelec_cpp_
+
 #include "FobjSelec.hpp"
 
 void FobjSelec::init(Result *res, Crossover *cross){
@@ -52,3 +55,4 @@ vector<size_t> FobjSelec::sort_indexes(const vector<float> &v){
 
     return idx;
 }
+#endif

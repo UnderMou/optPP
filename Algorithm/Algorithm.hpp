@@ -1,3 +1,5 @@
+#ifndef _Algorithm_hpp_
+#define _Algorithm_hpp_
 class Algorithm{
     protected:
         
@@ -7,3 +9,4 @@ class Algorithm{
         virtual void advance_gen(Result *res, Problem prob) = 0;
 
 };
+#endif

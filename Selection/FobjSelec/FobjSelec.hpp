@@ -1,4 +1,6 @@
 // This selection mechanism accounts only to the objective function value
+#ifndef _FobjSelec_hpp_
+#define _FobjSelec_hpp_
 
 #include "../Selection.cpp"
 
@@ -12,3 +14,4 @@ class FobjSelec : public Selection{
 
         vector<size_t> sort_indexes(const vector<float> &v);
 };
+#endif

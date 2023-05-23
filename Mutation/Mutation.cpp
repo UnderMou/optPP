@@ -1,3 +1,6 @@
+#ifndef _Mutation_cpp_
+#define _Mutation_cpp_
+
 #include "Mutation.hpp"
 
 void Mutation::print_p_mut(){
@@ -11,3 +14,4 @@ void Mutation::print_p_mut(){
     }
     cout << endl;
 }
+#endif
