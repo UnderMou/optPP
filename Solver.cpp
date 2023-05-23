@@ -1,11 +1,10 @@
 #include "Solver.hpp"
 
-void Solver::init(Problem value1, Result* value2, int value3, Algorithm value4){
+void Solver::init(Problem value1, Result* value2, int value3){
     max_gen = value3;
     prob = value1;
     res = value2;
     t = 0;
-    alg = value4;
 }
 
 bool Solver::stop_criteria(){
@@ -13,11 +12,11 @@ bool Solver::stop_criteria(){
     return false;
 }
 
-void Solver::run(){
+void Solver::run(Algorithm *alg){
     while(stop_criteria()){
         cout << "iteração: " << t << endl;
         //evaluate();
-        update_pop();
+        update_pop(alg);
         t++;
     }
 }
@@ -37,6 +36,6 @@ void Solver::evaluate(){
     
 }
 
-void Solver::update_pop(){
-    alg.advance_gen(res, prob);    
+void Solver::update_pop(Algorithm *alg){
+    alg->advance_gen(res, prob);    
 }
