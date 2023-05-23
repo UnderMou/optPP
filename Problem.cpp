@@ -11,7 +11,7 @@ float Problem::f_obj(vector<float> ind){
     for(int i = 0;i<ind.size();i++){
         ret += ind[i];
     }
-    
+    // Alg
     return (1)*ret; 
 }
 
