@@ -17,8 +17,6 @@ class Solver{
 
         bool stop_criteria();
 
-        void evaluate();
-
         void update_pop(Algorithm *alg);
 
 };

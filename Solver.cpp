@@ -18,25 +18,9 @@ bool Solver::stop_criteria(){
 void Solver::run(Algorithm *alg){
     while(stop_criteria()){
         cout << "iteração: " << t << endl;
-        //evaluate();
         update_pop(alg);
         t++;
     }
-}
-
-void Solver::evaluate(){
-    /*
-    for(int i = 0;i<res->get_N();i++){
-        // evaluate objective funtion of each individual and set its value
-        // on Result.Fobj attribute of the Result class
-        res->set_Fobj(
-                    i,                           // individual index
-                    prob.f_obj(res->get_pop(i))  // individual objective function value
-                );
-    }
-    */
-
-    
 }
 
 void Solver::update_pop(Algorithm *alg){
