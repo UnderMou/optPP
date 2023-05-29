@@ -8,7 +8,7 @@ int main(){
     p.init();
 
     Result r;
-    r.init(50,2,&p);
+    r.init(100,2,&p);
     r.write_results();
 
     GA_simplest a;
@@ -20,7 +20,7 @@ int main(){
     pA->init(25, &r); // seed = 13, Result object, 
     
     Solver s;
-    s.init(p,&r,500);
+    s.init(p,&r,1000);
     s.run(pA);
 
     r.write_results();

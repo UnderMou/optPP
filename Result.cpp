@@ -2,8 +2,12 @@
 #define _Result_cpp_
 
 #include "Result.hpp"
+#include <string>
+#include <fstream>
 #include <cmath>
 #include <bits/stdc++.h>
+
+using namespace std;
 
 void Result::init(int value1, int value2, Problem *prob){
     // Define population sizes
@@ -53,18 +57,33 @@ float Result::get_Fobj(int idx){
 }
 
 void Result::write_results(){
+    ofstream myfile;
+    string filename = "./Post_proc/pop.csv";
+    myfile.open (filename);
+    cout << "\n\nWriting the results within ´´" << filename << "`` file." << endl;
+
     cout << "pop:" << endl;
     for(int i=0;i<N;i++){
         for(int j=0;j<ind_size;j++){
-            cout << pop[i][j] << " ";            
+            cout << pop[i][j] << " ";
+            if(j<ind_size-1){myfile << pop[i][j] << ",";}
+            else{myfile << pop[i][j] << "";}            
         }
         cout << endl;
+        myfile << endl;
     }
     cout << endl;
+    myfile.close();
+
+    filename = "./Post_proc/pop_Fobj.csv";
+    myfile.open (filename);
+    cout << "\n\nWriting the results within ´´" << filename << "`` file." << endl;
     cout << "pop_Fobj:" << endl;
     for(int i=0;i<N;i++){
-        cout << pop_Fobj[i] << " ";            
+        cout << pop_Fobj[i] << " ";           
         cout << endl;
-    }
+        myfile << pop_Fobj[i] << endl; 
+    }  
+    myfile.close();
 }
 #endif
